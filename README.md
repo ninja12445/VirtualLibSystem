@@ -1,3 +1,2 @@
 # Group4
-In this semester we will design and implement a library system with fully detailed interface and 100% working and functional feature 
-that you can test locally
+[Group 4] We will using top down approach to design and implement a working 100% correct and ready to deploy fully functional Library System prototype that you can test locally.
