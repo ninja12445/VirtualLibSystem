@@ -1,24 +1,17 @@
-/* *********************************************************************
-Name: Adriel 
-Action: A java program that outputs Hello, World! on screen
+/*
+    Name: Adriel 
+    Action: A java program that outputs Hello, World! on screen
 */
 
-/**
- *
- * @author tuesd
- */
-public class HelloWorld {
 
-    /**
-     * @param args the command line arguments
-     */
+public class HelloWorld {
     public static void main(String[] args) {
-        System.out.println("Hello, World!");//
+        System.out.println("Hello, World!"); // This line prints and displays Hello, World to the screen 
     }
     
 }
 
-/* **************************Output*****************************
+/* ========================== Output ========================= 
  Hello, World!    
 */
 
