@@ -15,7 +15,6 @@
  * + What algorithms do you use ? 
  * + What does it handle ? 
  * ============================================================
- * 
  * Testing Strategies: 
  * Minimum requirements: 
  * 20 test cases / run unit tests to verify the class you wrote is working  
