@@ -1,0 +1,25 @@
+/**
+ * ============================================================
+ * Project Name: Virtual Library
+ * Members: Adriel, Naja Pettigrew, Misbah Amir , Tyana Rogers
+ * Group: G4
+ * ============================================================
+ * Class Name: (put your class name here)
+ * Contributor Name: (put your name here)
+ * ============================================================
+ * Class Action: What does the class you wrote responsible for ? 
+ * Describe what does the method do, mention briefly
+ * ============================================================
+ * Program main features:
+ * + What does it do ? 
+ * + What algorithms do you use ? 
+ * + What does it handle ? 
+ * ============================================================
+ * 
+ * Testing Strategies: 
+ * Minimum requirements: 
+ * 20 test cases / run unit tests to verify the class you wrote is working  
+ * ============================================================
+ * Last Modified Date: (put the Date here)
+ * ============================================================
+ */
