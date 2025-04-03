@@ -1,1 +1,1 @@
-# Config (`HelloWorld.java`)
+# (`HelloWorld.java`)
