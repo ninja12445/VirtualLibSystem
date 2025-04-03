@@ -1,5 +1,5 @@
-Added java code examples and syntax declaration
-
+#Added java code examples and syntax declaration
+=================================================
 **Task:** Have not come up with the plan  
 **Status:** Begin  
 **Changes:** Added
