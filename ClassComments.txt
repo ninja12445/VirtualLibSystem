@@ -4,11 +4,12 @@
  * Members: Adriel, Naja, Misbah, Tyana
  * Group: G4
  * ============================================================
- * Class Name: (put your class name here)
- * Contributor Name: (put your name here)
+ * Class Name:  C201
+ * Contributor Name: eg. Adriel
  * ============================================================
  * Class Action: What does the class you wrote responsible for ? 
- * Describe what does the method do, mention briefly
+ * Describe what does the method do, give a brief description to 
+ * help the reader visualize the method flow
  * ============================================================
  * Program main features:
  * + What does it do ? 
