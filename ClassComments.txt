@@ -1,7 +1,7 @@
 /**
  * ============================================================
  * Project Name: Virtual Library
- * Members: Adriel, Naja Pettigrew, Misbah Amir , Tyana Rogers
+ * Members: Adriel, Naja, Misbah, Tyana
  * Group: G4
  * ============================================================
  * Class Name: (put your class name here)
