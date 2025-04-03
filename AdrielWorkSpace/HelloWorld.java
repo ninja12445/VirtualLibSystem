@@ -1,6 +1,10 @@
 /*
-    Name: Adriel 
-    Action: A java program that outputs Hello, World! on screen
+ * 
+ *  File: HelloWorld.java
+ *  Task: Have not come up with the plan
+ *  Name: Adriel 
+ *  Action: A java program that outputs Hello, World! on screen
+ *  Changes & TODO later: 
 */
 
 
