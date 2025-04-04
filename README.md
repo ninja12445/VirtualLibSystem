@@ -20,7 +20,7 @@
  *  At the end, must include a stand along .jar file uploaded and make sure it is working and excutable by no errors
  *  Each members, must cited the sources they use, whether from the internet, books, videos use  
  * Screen shots of the final result application should also include inside the repository
- # Code of Conduct: 
+ # Code of Conducts: 
  * Treat people the way you want to be treated
  * Ensure active communication between other collaborators and works are expected to be on time 
  * Be professional and respect other contributors
