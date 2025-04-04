@@ -33,8 +33,8 @@
  6. user check out
  7. can borrow only max 5 books 
  8. send a notification on the user screen to let them know they borrowed the books 
- =================
- GUI might consists of CLI and UI 
+
+ **GUI might consists of CLI and UI** 
  focus more on the CLI and the core logic first possibly and then work on the UI mechanics
  should have a blank canvas for the user to enter and then a button [search], should display 
  search result, we can use a find button to replace with search,
