@@ -26,7 +26,7 @@
  mouse cursor. 
  #Pseudocode from scratch 
  1. user open app 
- 2. user interact GUI* 
+ 2. user interact with the GUI* 
  3. user create account
  4. user login
  5. user type in and it shows a list of books
@@ -37,7 +37,9 @@
  GUI might consists of CLI and UI 
  focus more on the CLI and the core logic first possibly and then work on the UI mechanics
  should have a blank canvas for the user to enter and then a button [search], should display 
- search result, we can use a find button to replace with search, here are some categories
- Author:,  Published:, Edition: , Language: , Format:, Copies At: 
+ search result, we can use a find button to replace with search,
+ #Here are some categories
+ Author,  Published, Edition, Language, Format, Institution available 
+ (original Copies At, modified to Institution avaiable[may sound more specific]) 
  reference from iucat.iu.edu [https://iucat.iu.edu/]
 
