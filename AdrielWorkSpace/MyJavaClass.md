@@ -2,7 +2,7 @@
  ============================================================
  * Project Name: Virtual Library
  * Members: Adriel, Naja, Misbah, Tyana
- * Group: G4
+ * G4
  ============================================================
  * Class Name:  C201
  * Contributor Name: Adriel
@@ -20,8 +20,8 @@
  * Minimum requirements: 
  * 20 test cases / run unit tests to verify the class you wrote is working  
  ============================================================
- * Last Modified Date: (put the Date here)
- ============================================================
+ * Last Modified Date: 4/4/2025
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
  # TODO Virtual Library
  ===========================
  #💡Brain Storm Part💡 
