@@ -3,9 +3,7 @@
    
  # We are group 4
  * our team are working on designing a functional
-   virtual library system. Our goal is to make sure it is correct
-   and working.
-
+   virtual library system. Our goal is to make sure it is correct, fast, and accurate
  # Team Project Structure: 
  * Our team ensure each and every member contribute equally, since we have 4 members, the tasks are involve and are expected to have 4
  * Java classes. 
