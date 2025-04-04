@@ -1,9 +1,10 @@
-|**Project Name:** Virtual Library                             |
-|---------------------|----------------------------------------|
-|**Members:** Adriel, Naja, Misbah, Tyana                      |
-|**G4**                                                        |
-|**Class Name:**  C201                                         |
-|**Contributor Name:** Adriel                                  |
+| **Project Name:**       | Virtual Library                               |
+|-------------------------|-----------------------------------------------|
+| **Members:**            | Adriel, Naja, Misbah, Tyana                   |
+| **G4**                  |                                               |
+| **Class Name:**         | C201                                          |
+| **Contributor Name:**   | Adriel                                        |
+
 
  | Section                  | Description                                                                 |
  |--------------------------|-----------------------------------------------------------------------------|
