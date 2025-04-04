@@ -1,11 +1,8 @@
-
- ============================================================
- * Project Name: Virtual Library
- * Members: Adriel, Naja, Misbah, Tyana
- * G4
- ============================================================
- * Class Name:  C201
- * Contributor Name: Adriel
+**Project Name:** Virtual Library
+**Members:** Adriel, Naja, Misbah, Tyana
+**G4**
+**Class Name:**  C201
+**Contributor Name:** Adriel
 
  | Section                  | Description                                                                 |
  |--------------------------|-----------------------------------------------------------------------------|
@@ -19,7 +16,7 @@
  * Last time modified: 4/4/2025
 
  Some other curious and strong questions to ask:
- What are the real constraints, how can I think and design the pseudocode as in abstract way as possible, what are possible challenges, how does my class relate to real world industry applications, whats my insights ?
+ What are the real constraints, how can I think and design the pseudocode as in abstract way as possible, what are possible challenges, how does my class relate to real world industry applications, whats my insights and whats the learning outcomes ?
  # TODO Virtual Library
  #💡Brain Storm Part💡 
  has user toggle on a checkbox GUI button, allow to get all the books How this works?
