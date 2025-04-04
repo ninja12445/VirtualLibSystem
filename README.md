@@ -14,7 +14,7 @@
  * learnt in class to apply to this project, as a whole group, we will design and enable least GUI components as possible.
  # Notes : 
  * We will include a more specific and detailed README file which briefly summarize our project aim, purposes, GUI functions and 
- * and step by steps how to use the programs for you to test locally at any time.
+   and step by steps how to use the programs for you to test locally at any time.
  * .java source code MUST strictly upload to from each person to our group github repository
  *  Each individuals MUST  have a Github account and going to be add as a collaborator toward the group project
  *  At the end, must include a stand along .jar file uploaded and make sure it is working and excutable by no errors
