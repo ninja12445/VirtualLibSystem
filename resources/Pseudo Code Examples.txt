@@ -1,0 +1,111 @@
+'
+'Program has user input scores these scores are then stored in an array of decimals.
+'Then a function is used to determine the average of all these numbers 
+'in an array.
+'Will currently work for only 5 test scores.
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int size = 5;
+        double[] scores = new double[size];
+        double average;
+
+        Scanner scanner = new Scanner(System.in);
+        for (int i = 0; i < size; i++) { // uses variable size for upper limit of items
+            System.out.print("Enter Score --> ");
+            scores[i] = scanner.nextDouble();
+        }
+
+        average = averageScores(scores);
+        System.out.println();
+        System.out.printf("Average of test scores is %.2f%n", average);
+
+        scanner.close();
+    }
+
+    /* ***********************  AverageScores  ********************************
+     * Action : Will find the average of the numbers in the passed in array.
+     * Parameters:
+     * IN: A double array that holds all the numbers to find average of 
+     * OUT: none
+     * Returns: The average of the numbers in the array.
+     * Note : array is passed in by reference so copy of all elements in array
+     *       are not made, speeds up execution of program.
+     */ ------------------------------------------------------------------------
+    public static double averageScores(double[] s) {
+        double total = 0;
+
+        for (int i = 0; i < s.length; i++) { // this loop sums up all numbers in array
+            total += s[i];
+        }
+
+        return total / s.length; // pass back the average
+    }
+}
+  
+****************************** Output ****************************
+'Enter Score --> 67
+'Enter Score --> 89
+'Enter Score --> 89
+'Enter Score --> 98
+'Enter Score --> 67
+
+'Average of test scores is 82
+
+
+
+===========================================================================
+
+
+import java.util.Scanner;
+
+public class program_example {
+    public static void main(String[] args) {
+        String input;
+        char ch;
+        int letterOrDigit = 0, punct = 0, lower = 0;
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Please enter a sentence  --> ");
+        input = scanner.nextLine();
+
+        for (int i = 0; i < input.length(); i++) {
+            ch = input.charAt(i); // get one character at a time from input
+
+            if (Character.isLetterOrDigit(ch)) {
+                letterOrDigit++;
+            }
+
+            if (Character.isWhitespace(ch) || !Character.isLetterOrDigit(ch)) {
+                if (Character.toString(ch).matches("\\p{Punct}")) {
+                    punct++;
+                }
+            }
+
+            if (Character.isLowerCase(ch)) {
+                lower++;
+            }
+        }
+
+        System.out.println("Letters or numbers = " + letterOrDigit); // Letters or numbers = {0}
+        System.out.println("Punctuation marks = " + punct); // Punctuation marks = {0}
+        System.out.println("Lower case letters = " + lower); // Lower case letters = {0}
+
+        int x = 3, y = 5, z = 7;
+
+        System.out.println(x + "   " + y + "    " + z); // 3   5    7
+        System.out.println("----" + "+" + "===="); // ----+====
+        
+        scanner.close();
+    }
+}
+
+'***********************  output  ***************************************
+'Please enter a sentence  --> This 34! TH34,.
+'Letters or numbers = 10
+'Punctuation marks = 3
+'Lower case letters = 3
+
