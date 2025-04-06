@@ -16,6 +16,5 @@
 |                | - [Class Documentation](https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html)
 |                | - [Concurrency Documentation](https://docs.oracle.com/javase/tutorial/essential/concurrency/syncmeth.html)
 |                | - [Tutorial Documentation](https://docs.oracle.com/javase/tutorial/)
-✅       |
 | **Citation**   | Oracle.com                                                                                                                                            ✅     |
 
