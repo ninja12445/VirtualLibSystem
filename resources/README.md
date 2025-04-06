@@ -14,8 +14,8 @@
 |                | - [MouseEvent Documentation](https://docs.oracle.com/javase/8/docs/api/java/awt/event/MouseEvent.html)                                              
 |                | - [Attributes Documentation](https://docs.oracle.com/javase/8/docs/api/java/util/jar/Attributes.html)            
 |                | - [Class Documentation](https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html)
-|                | - [Concurrency Documentation] (https://docs.oracle.com/javase/tutorial/essential/concurrency/syncmeth.html)
-|                | - [Tutorial Documentation] (https://docs.oracle.com/javase/tutorial/)
+|                | - [Concurrency Documentation](https://docs.oracle.com/javase/tutorial/essential/concurrency/syncmeth.html)
+|                | - [Tutorial Documentation](https://docs.oracle.com/javase/tutorial/)
 ✅       |
 | **Citation**   | Oracle.com                                                                                                                                            ✅     |
 
