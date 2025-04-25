@@ -1,10 +1,10 @@
-# (`myClass.java`)
+# (`Library.java`)
 **File:** `HelloWorld.java`
-**Title:** Brainstorm how to design the program architecture  
-**Task:** Have not come up with the plan  
-**Status:** Begin  
+**Title:** Library class
+**Task:**  Manages book collection serching filtering and batch management
+**Status:** In progress   
 **Changes:**  
 - [ ] Comepleted : Added MyJavaClassTemplate, should reorganize.
-- [ ] TODO: should encourage team member to active communication
-- [ ] TODO: start/begin on writing the pseudocode and design using UML structure
-- [ ] TODO: add user manual for clarification whats the program / class do
+- [ ] Completed: UML structure, top down class design, pseudocode outline  
+- [ ] TODO: creates documentation to guide the user 
+- [ ] TODO: 
