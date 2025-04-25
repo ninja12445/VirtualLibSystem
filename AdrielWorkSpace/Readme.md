@@ -1,4 +1,4 @@
-# (`Library.java`)
+# Library.java
 **File:** `HelloWorld.java`
 **Title:** Library class
 **Task:**  Manages book collection serching filtering and batch management
