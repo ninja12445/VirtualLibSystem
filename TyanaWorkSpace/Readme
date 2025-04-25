@@ -1,1 +1,8 @@
+USER README 
+The User class represents a user within the Virtual Library System. It stores and manages user information, such as the username, password, and email. This class provides methods for setting and retrieving user data, which can be used for user authentication and managing interactions with the system.
+Key Features:
+•	Stores user credentials such as username and password.
+•	Optionally stores email for user communication.
+•	Provides methods for getting and setting user information, such as username, password, and email.
+This class was designed and implemented by Tyana Rogers as part of the team project for the Virtual Library System.
 
