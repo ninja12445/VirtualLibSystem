@@ -4,4 +4,4 @@ key features:
 - tracks book status (available or borrowed)
 - includes full metadata: title, author, ISBN
 
-this Class was designed and immoplementerd by Naja Pettigrew as part of the team project for our Virtual Library System
+this Class was designed and implemented by Naja Pettigrew as part of the team project for our Virtual Library System
