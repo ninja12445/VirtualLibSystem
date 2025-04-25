@@ -9,4 +9,7 @@
 - [ ] Completed: Added a .txt about the functionality
 - [ ] TODO: creates documentation to guide the user 
 - [ ] TODO: write a quick UML documenation and test cases and measurements (show in detailes below)
+- [ ] TODO: Clean up and put the file into LibConfig.java class, refix and add 10 more functions. Basically the backbone core mechanics has completed.
+- [ ] TODO: Add + Debug + Test Strategy, expected done in one day.
+
 
