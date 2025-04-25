@@ -6,6 +6,7 @@
 **Changes:**  
 - [ ] Comepleted : Added MyJavaClassTemplate.✅
 - [ ] Completed: UML structure, top down class design, pseudocode outline  ✅
+- [ ] Completed: Added a .txt about the functionality
 - [ ] TODO: creates documentation to guide the user 
 - [ ] TODO: write a quick UML documenation and test cases and measurements (show in detailes below)
 
