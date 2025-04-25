@@ -9,13 +9,3 @@
 - [ ] TODO: creates documentation to guide the user 
 - [ ] TODO: write a quick UML documenation and test cases and measurements (show in detailes below)
 
-Core ideas and functionality 
-
-constructor 
-
-collections of book [] may be arrays or object  
-
-addBookToCollection (book) 
-add one book into the collections // if book is available, false if invalid
-return true 
-
