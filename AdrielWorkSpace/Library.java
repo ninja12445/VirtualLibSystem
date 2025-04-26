@@ -1,9 +1,12 @@
+
+import max.MaxBorrowLimits;
+
 /*
  *
  * Copyright (C) 2025 Adriel Nguyen
  *
 Problem statement 
-Lib clasS: user can only borrow maximum 5 books at one time, so the user can only borrow one book at once. Will show warning msg if they go overlimits that already set forth.  
+Lib class: user can only borrow maximum 5 books at one time, so the user can only borrow one book at once. Will show warning msg if they go overlimits that already set forth.  
 
 
 
@@ -58,53 +61,17 @@ class 173 - 304
 public class Library {
 
     public static void main(String[] args) {
+        int max = 5;
+        // user can only borrow 5 books;            
+        String[] selected= {"book1", "book2", "book3", "book4", "book5", "book6", "book7", "book8", "book9", "book10"};
+      
+        //constructor 
+        MaxBorrowLimits borrowAllowance = new MaxBorrowLimits(selected, max);
         
-        int [] maxBorrowLimits = new int [5]; // user can only borrow 5 books; 
-        String[] bookNames = {"0"};
-        /*
-        
-        */
-        if (bookNames.length > maxBorrowLimits.length) {
-            System.out.println("You are only allowed to borrow up to 5 books at the same time");
-            System.out.printf("You have borrowed %d more than limit.\n", Math.abs(bookNames.length - maxBorrowLimits.length));
-            System.out.println("Please go ahead reselecting the number of books you have chosen. ");
-        } else {
-            for (String bookName : bookNames) {
-                System.out.println(bookName);
-            }
-        }
+        borrowAllowance.setBorrowLimits();
             
-        // super simple to understand
-        // %n, %.2f
-        // what if bookNames = null ? no display book names
+       
     }
     
-    // instance variable 
-    
-    // invoke by calling object.writeOutput()(reference to method name)
-    // instead sout(month + "" + day + "" + year) 
-    // it will be sout(date1.month + "" + date1.day + "" + date1.year)
-  
-    /* 
-    // constructor
-    
-    priv class which prevents access from other class
-    private int MaxBorrowLimits;
-
-    getter 
-    public int get MaxBorrowLimits() {
-        return this.MaxBorrowLimits;
-    }
-
-    setter methods 
-    //this method which allows the other code stub outside of the class to call this method (plan to move the constructor, setter, getter to another class name LibConfig 
-    // int returns integer value 
-    public void setMaxBorrowLimits(int MaxBorrowLimits) { 
-        if (MaxBorrowLimits > 5) 
-            // bookname.length part here 
-        else 
-            for loop here
-    }
-    
-    */
+ 
 }
