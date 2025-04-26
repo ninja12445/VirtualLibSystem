@@ -5,6 +5,12 @@ import max.MaxBorrowLimits;
  *
  * Copyright (C) 2025 Adriel Nguyen
  *
+ * Projects: VirtualLibSystem
+ * Authors: Adriel
+ * Date: 25/4/2025
+ * Action: has a constructor, has objects and reference to the class name.
+ * To be added 
+ 
 Problem statement 
 Lib class: user can only borrow maximum 5 books at one time, so the user can only borrow one book at once. Will show warning msg if they go overlimits that already set forth.  
 
