@@ -8,6 +8,8 @@ package max;
  * Phrase 1: brainstorm pseudocode
  * Phrase 2: begin to code
  * Phrase 3: Debug + test algorithms
+ * What's changed: rename class name from ControlMechanics to ControlModule, applied for other 3 class.
+ * Last Modified: 2/5/2025 11:24 AM
  */
 public class ControlMechanics {
     // 1. make [testing] functions as void 
