@@ -15,6 +15,7 @@ create a package name max and put MaxBorrowLimits.java class inside it. Should b
 - [ ] TODO: Add + Debug + Test Strategy, expected to accomplish everything within one day.
 - [ ] TODO: Turn these frame work in Library.java into PSEUDOCODE and algorithms.
 - [ ] TODO: Working progress and expectation to fully complete own class: Friday 2th May. Group work expected on Sunday 5th May, jar file should be ready to deliver
+- [ ] TODO: Finish first 10 listed ideas 
   
       
 
