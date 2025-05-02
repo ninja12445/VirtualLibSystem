@@ -1,5 +1,16 @@
 package max;
 
+/**
+ *
+ * Copyright (C) 2025 Adriel Nguyen
+ * make it into three phrases 
+ * Phrase 1: brainstorm pseudocode
+ * Phrase 2: begin to code
+ * Phrase 3: Debug + test algorithms
+ * What's changed: rename class name from MaxBorrowLimits to CheckLimitsModule
+ * Last Modified: 2/5/2025 11:27 AM
+ */
+
 public class MaxBorrowLimits {
     private int maxNumOfBooksBorrowed;
     private String[] bookNames = new String[100]; // for encapsulation & code obfuscation
