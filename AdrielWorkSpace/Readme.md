@@ -1,5 +1,5 @@
-# Library.java
-**File:** `Library.java & MaxBorrowLimits.java`
+# Library Class
+**File:** `Library.java, CheckLimits.java`
 **Title:** Library class
 **Task:**  Manages book collection serching filtering and batch management
 **Status:** In progress   
