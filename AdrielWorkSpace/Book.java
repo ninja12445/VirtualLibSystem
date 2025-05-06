@@ -228,7 +228,7 @@ public class Book {
 
         
         if (ratingsCount >= RATINGS_LIMIT) {
-            System.out.println("Limits Reached. Cannot add more tag! " + ratings);
+            System.out.println("Limits Reached. Cannot add more ratings! " + ratings);
         }   
         
         ratingsArr[ratingsCount] = ratings;
