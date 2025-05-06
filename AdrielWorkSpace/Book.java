@@ -11,7 +11,7 @@ package app;
 /**
  * Project: Virtual Library System
  * @author: Naja Pettigrew
- * @fix-contributor: Adriel Nguyen 
+ * @Class contributor helper: Adriel Nguyen 
  * Date: 4/4/2025
  * Date working on: 5/5/2025
  * The Book class represents a book within the Virtual Library System. 
