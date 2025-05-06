@@ -46,7 +46,7 @@ public class Book {
     private int tagsCount;
     private int ratingsCount;
     
-    // constructor
+    // constructor, initalized as static variables
     public Book () {
         isbn = "";
         title = "";
@@ -300,7 +300,7 @@ TODO: REMINDER: move into Library class
             System.out.println("Book is available");
         }
     }
-
+// concepts understand: static variables, default initialization. if you not declare static variables, what will happen? boolean variable automatically initialize to false
 ===============================================
 User class 
 private ArrayList<String> borrowedISBNs;
