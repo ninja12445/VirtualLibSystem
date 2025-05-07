@@ -2,41 +2,48 @@
 package app;
 
 /**
- *
- * Class: Book
- * Changes made, add tags, reviews, ratings, publication year, remodify constructor, parameterized constructor, 
- * 
- */
-
-/**
  * Project: Virtual Library System
  * @author: Naja Pettigrew
- * @Class contributor helper: Adriel Nguyen 
+ * @fix-contributor: Adriel Nguyen 
  * Date: 4/4/2025
- * Date working on: 5/5/2025
+ * Date working on: 5/5/2025, 6/5/2025, 7/5/2025
  * The Book class represents a book within the Virtual Library System. 
  * It stores detailed information about each book,
  * such as the title, author, ISBN, availability, and genres. 
  * This class provides methods for checking availability, borrowing, returning, and viewing book details.
- * Changes Made: remove return() and borrow() methods and move it into Library class, 
+ * Changes Made: remove return() and borrow() methods and move it into Library class, removed synopsis, try out multiple test cases for 
+ * this class. 
  */
+
+
 import java.util.ArrayList;
 import java.util.List;
-/*
-Book: isbn, title, author, genres, synopsis, status
+/*  
+    Book title
+    BookID (ISBN) 
+    publicationYear - year publish
+    tags - topic phrases
+    available - ready for user to borrow or no
+    ratings - average user rating of the book 
+    reviews - submit review for books 
+    average rating = (sum from from 1 - 5) / number of ratings; 
+    Formula to compute: 3 + 4 + 5 / 3 (rate three times). I think will make it applicable for all books 
+    
 */
+
 public class Book {
     private String isbn;
     private String title;
     private String author; 
     private ArrayList <String> genres; //uses arraylist directly
-    private String synopsis;
     private boolean available;
     private int publicationYear;
     private List<String> tags;
     private List<String> reviews;
+    private List<List<String>> undo = new ArrayList<>();
+    private List<List<String>> redo = new ArrayList<>();
     private List<Integer> ratings;
-    private static final int TAGS_LIMIT = 5;
+    private static final int TAGS_LIMIT = 3;
     private static final int REVIEWS_LIMIT = 5;
     private static final int RATINGS_LIMIT = 5;
     private String[] tagsArr;
@@ -45,14 +52,15 @@ public class Book {
     private int reviewsCount;
     private int tagsCount;
     private int ratingsCount;
-    
-    // constructor, initalized as static variables
+    private double rate;
+    private double totalRatingScore;
+
+    // constructor
     public Book () {
         isbn = "";
         title = "";
         author = "";
         this.genres = new ArrayList<>();
-        this.synopsis = "";
         this.available = true;
         this.publicationYear = 0;
         this.tags = new ArrayList<>();
@@ -64,7 +72,9 @@ public class Book {
         reviewsCount = 0;
         tagsCount = 0;
         ratingsCount = 0;
-        
+        rate = 0.0;
+        totalRatingScore = 0.0;
+
     }
     
     /**
@@ -72,7 +82,6 @@ public class Book {
      * @param title
      * @param author
      * @param genres
-     * @param synopsis
      * @param available
      * @param publicationYear
      * @param tags
@@ -80,10 +89,9 @@ public class Book {
      * @param ratings
      */
     
-    public Book (String isbn, String title, String author, ArrayList<String> genres, String synopsis, boolean available, 
-            int publicationYear,List<String> tags, List<String> reviews, List<Integer> ratings) {
+    public Book (String isbn, String title, String author, ArrayList<String> genres, boolean available, int publicationYear,List<String> tags, List<String> reviews, List<Integer> ratings) {
         this.genres = new ArrayList<>(genres); //creates a copy if list is modified outside the book class
-        this.synopsis = synopsis;
+
         this.available = true; //default: book is available when created
         this.publicationYear = publicationYear;
         this.tags = new ArrayList<>(tags);
@@ -101,6 +109,15 @@ public class Book {
         reviewsCount = 0;
         tagsCount = 0;
         ratingsCount = 0;
+        
+        this.genres.add("Fantasy");
+        this.genres.add("Adventure");
+        this.genres.add("History");
+        
+        
+     
+        
+
     }
     
     // ---- Getters ------
@@ -118,10 +135,6 @@ public class Book {
     
     public ArrayList<String> getGenres() {
         return new ArrayList<>(genres);
-    }
-    
-    public String getSynopsis() {
-        return synopsis;
     }
     
     public boolean isAvailable() {
@@ -144,10 +157,15 @@ public class Book {
         return new ArrayList<> (ratings);
     }
     
-    // ----- Setters -----
-    public void setSynopsis(String synopsis) {
-        this.synopsis = synopsis;
+    public double getAvgRating() {
+        if (ratingsCount == 0) 
+            return 0.0;
+        return (double) totalRatingScore / ratingsCount;
     }
+    
+    // ----- Setters -----
+    
+
     
     public void setAvailable(boolean a) {
         available = a;
@@ -155,13 +173,13 @@ public class Book {
     
     @Override // Minor change: output display into this. 
     public String toString() {
-        return String.format("Title: %s\nAuthor: %s\nISBN: %s\nGenres: %s\nSynopsis: %s\nStatus: %s", title, author, isbn, genres,
-                synopsis, available ? "Available" : "Borrowed");
+        return String.format("Title: %s\nAuthor: %s\nISBN: %s\nGenres: %s\nStatus: %s", title, author, isbn, genres,
+                available ? "Available" : "Borrowed");
     }
   
-    
+    // cannot be more than current year and below zero
     public void setPublicationYear (int year) {
-        if (year > 2026 || year < 0){
+        if (year > 2025 || year < 0){
             throw new IllegalArgumentException("Unknown publication year");
         }
         this.publicationYear = year;
@@ -201,42 +219,83 @@ public class Book {
     }
     
     public void addReview(String review) {
-        if (review == null) {
-            System.out.println("Cannot insert null review in this place");
-        }
-        
-        String trimmedReview = review.trim();
-        
-        if(trimmedReview.isEmpty()) {
-            System.out.println("Error, user cannot add an empty review");
-        }
-        
-        if (reviewsCount >= REVIEWS_LIMIT) {
-            System.out.println("Limits Reached. Cannot add more review! " + trimmedReview);
-        }   
-        
-        reviewsArr[reviewsCount] = trimmedReview;
-        reviewsCount++;
-        
+        if (review == null || review.trim().isEmpty()) {
+            System.out.println("Error: Review cannot be null or empty.");
+        return;
     }
+
+        if (reviews.size() >= REVIEWS_LIMIT) {
+            System.out.println("Limit reached. Cannot add more reviews.");
+            return;
+        }
+
+        String trimmedReview = review.trim();
+      
+        
+        undo.add(new ArrayList<> (reviews));
+        redo.clear();
+        
+        reviews.add(trimmedReview);
+        System.out.println("Review added: " + trimmedReview);
+       
+    }
+    
+
+    
+    public void displayReviews() {
+        if (reviews.isEmpty()) {
+            System.out.println("No reviews are available at the moment.");
+            
+        }
+        
+        System.out.println("User Review: ");
+        for (String r : reviews) {
+            System.out.println(" " + r);
+        }
+    }
+    
+    
     
     public void addRatings(int ratings) {
         
         if (ratings < 1 || ratings > 5) {
             System.out.println("Invalid rating value" + ".Must be between 1 and 5");
-        }
-
+        } 
         
         if (ratingsCount >= RATINGS_LIMIT) {
             System.out.println("Limits Reached. Cannot add more ratings! " + ratings);
         }   
         
-        ratingsArr[ratingsCount] = ratings;
+        totalRatingScore += ratings;
         ratingsCount++;
-        //for debug log
+        
         System.out.println("Add rating: " + ratings);
         
     }
+    
+    public void undo() {
+        if (undo.isEmpty()) {
+            System.out.println("No undo state.");
+            return;
+        }
+        
+        redo.add(new ArrayList<>(reviews));
+        
+        reviews = undo.remove(undo.size()-1);
+        System.out.println("Successfully undo");
+    }
+    
+    
+    public void redo() {
+        if (redo.isEmpty()) {
+            System.out.println("No redo state.");
+        }
+        
+        undo.add(new ArrayList<>(reviews));
+        reviews = redo.remove(redo.size()-1);
+        System.out.println("Successfully redo");
+    }
+
     /* Compare two book objects by ISBN validation
      * @param different book to compare
      * @return ture if two books are having the same ISBN
@@ -268,39 +327,64 @@ public class Book {
     }
     
     public static void main(String[] args) {
-        ArrayList<String> genres = new ArrayList<>();
-        Book firstBook = new Book("12345", "Book1", "Author1", genres, "", true, 2020, List.of(), List.of(), List.of());
+        ArrayList <String> genres = new ArrayList<>();
+        genres.add("Mystery"); //add mystery genre as place holder
+        genres.add("Thriller");
+        genres.add("Philosophy");
+        genres.add("Biography");
+    
+        Book firstBook = new Book("12345", "Book1", "Author1", new ArrayList<>(List.of("Fantasy", "Adventure", "History")), 
+                true, 2020, List.of(), List.of(), List.of());
         System.out.println(firstBook);
         firstBook.addTag("hello");
-        firstBook.addRatings(5);
+        firstBook.addRatings(3);
         firstBook.addReview("This is a good book");
+        firstBook.addRatings(4);
+        firstBook.addRatings(5);
+        System.out.println("Average Rating: " + firstBook.getAvgRating());
+        firstBook.undo();
+        firstBook.displayReviews();
+        firstBook.redo();
+        firstBook.displayReviews();
         
+        System.out.println();
+        
+        for (String g : firstBook.getGenres()) {
+            System.out.println(g);
+        }
+       
         
     }
     
 }
 
 /*
-Bug Found & Fixed : 30
-Observe: encounter null pointer reference twice during test. 
-TODO: REMINDER: move into Library class
-    //mark as borrowed
-    public void borrow() {
-        if(isAvailable) {
-            isAvailable = false;
-        } else {
-            System.out.println("Book has already been checked out.");
-        }
-    }
-    //mark as returned
-    public void returnBook() {
-        if (!isAvailable) {
-            isAvailable = true;
-        } else {
-            System.out.println("Book is available");
-        }
-    }
-// concepts understand: static variables, default initialization. if you not declare static variables, what will happen? boolean variable automatically initialize to false
+================ PROGRAM OUTPUT ==============
+
+Title: Book1
+Author: Author1
+ISBN: 12345
+Genres: [Fantasy, Adventure, History, Fantasy, Adventure, History]
+Status: Available
+Add rating: 3
+Review added: This is a good book
+Add rating: 4
+Add rating: 5
+Average Rating: 4.0
+Successfully undo
+No reviews are available at the moment.
+User Review: 
+Successfully redo
+User Review: 
+ This is a good book
+
+Fantasy
+Adventure
+History
+Fantasy
+Adventure
+History
+
 ===============================================
 User class 
 private ArrayList<String> borrowedISBNs;
@@ -321,4 +405,7 @@ LibraryUI {
 Javadoc on class and every public method 
 params, return, throw exceptions 
 
+Exception in thread "main" java.lang.NullPointerException: Cannot read the array length because "this.genresWord" is null
+	at app.Book.<init>(Book.java:119)
+	at app.Book.main(Book.java:338)
 */
